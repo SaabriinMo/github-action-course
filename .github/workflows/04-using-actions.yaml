@@ -20,6 +20,7 @@ jobs:
 
             - name: Install Deps
               run: npm ci
+              working-directory: 04-using-actions/react-app
 
 
 
