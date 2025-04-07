@@ -7,6 +7,10 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        # defaults to working directory that uses the same directory, applies to all the steps
+        defaults: 
+            run:
+                working-directory: 04-using-actions/react-app
         steps:
             - name: Checkout Code
               uses: actions/checkout@v2
@@ -20,9 +24,9 @@ jobs:
 
             - name: Install Deps
               run: npm ci
-              working-directory: 04-using-actions/react-app
 
-
+            - name: Run unit test
+              run: npm run test
 
         # checkout code from repo (workflow must be define inside repo)
         # install depenacies
