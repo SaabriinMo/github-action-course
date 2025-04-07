@@ -1,7 +1,7 @@
 name: 04- Using Actions
 
 on:
-    push:
+    workflow_dispatch:
 
 
 jobs:
@@ -12,6 +12,7 @@ jobs:
             run:
                 working-directory: 04-using-actions/react-app
         steps:
+            # important if you want to use the code in the repo
             - name: Checkout Code
               uses: actions/checkout@v2
             # - name: Printing Folders
