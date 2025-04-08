@@ -16,7 +16,7 @@ jobs:
                 cat << EOF
                 ${{ toJSON(github.event.pull_request.labels) }}
                 EOF
-
+# doesnt take the latest change to pr, like changing fix to chore
             - name: Bug step
               if: ${{ !cancelled() && contains(github.event.pull_request.title, 'fix')}}
               run: echo "i am a bug fix"
