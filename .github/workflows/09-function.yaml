@@ -9,7 +9,7 @@ jobs:
         steps:
             - name: Sleep for 20 sec
               run: sleep 20
-              
+
             - name: Failing step
               run: exit 1
             
@@ -27,4 +27,4 @@ jobs:
 
             - name: I will execute when cancelled
               if: ${{cancelled()}}
-              run: "event has been cancelled"
+              run: echo "event has been cancelled"
