@@ -10,17 +10,27 @@ on:
                     - failure
                 default: success
 
+# each step has it own github output. different step have differen output files
 jobs:
     build:
         runs-on: ubuntu-latest
         outputs:
             status-build: ${{steps.build.outputs.status}}
+            output1: ${{steps.build.outputs.output1}}
         steps:
             - name: Print GITHUB_OUTPUT path
               run: echo "$GITHUB_OUTPUT"
             - name: Bulid
               id: build
-              run: echo "status= ${{inputs.build-status}} >> '$GITHUB_OUTPUT'
+              run: |
+                echo $GITHUB_OUTPUT"
+                echo "status= ${{inputs.build-status}} >> '$GITHUB_OUTPUT'
+                echo "output1=value1" >> '$GITHUB_OUTPUT'
+                echo "output2=value2" >> '$GITHUB_OUTPUT'
+                cat '$GITHUB_OUTPUT'
+                echo "mistake=true" > "$GITHUB_OUTPUT"
+                cat '$GITHUB_OUTPUT'
+
 
     deploy:
         runs-on: ubuntu-latest
@@ -29,3 +39,6 @@ jobs:
         steps:
             - name: Deploy
               run: echo "Deploying"
+            - name: Print Output
+              run: |
+                echo "Output 1: ${{needs.build.outputs.output1}}"
