@@ -62,7 +62,7 @@ jobs:
                       size: medium
                 exclude:
                     - color: green
-                      shape: circle
+                      
 
                 # opacity -> doesnt exist in the matrix
                 # exclude:
