@@ -57,8 +57,16 @@ jobs:
                     - shape: circle
                       opacity: 100
                     - opacity: 50
+                    - color: green
+                      shape: circle
+                      size: medium
                 exclude:
-                    - opacity: 75
+                    - color: green
+                      shape: circle
+
+                # opacity -> doesnt exist in the matrix
+                # exclude:
+                #     - opacity: 75
                       
 
 
