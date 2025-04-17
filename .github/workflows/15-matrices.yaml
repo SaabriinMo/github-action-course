@@ -10,7 +10,8 @@ jobs:
         name: ${{ matrix.os }}-${{ matrix.node }}
         runs-on: ubuntu-latest
         strategy:
-            fail-fast: true
+            # fail-fast -> true : all steps will fail, if not all jobs will run despite the fail
+            fail-fast: false
             matrix:
                 node: [18.x, 20.x, 21.x]
                 os:
