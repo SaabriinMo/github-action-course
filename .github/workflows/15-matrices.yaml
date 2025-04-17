@@ -61,6 +61,7 @@ jobs:
                       shape: circle
                       size: medium
                 exclude:
+                    # works for partial and full matches to matrix
                     - color: green
                       
 
