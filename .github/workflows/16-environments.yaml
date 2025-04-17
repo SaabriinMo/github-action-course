@@ -18,7 +18,7 @@ jobs:
         steps:
             - name: Echo vars
               run: |
-                echo "Deploying to staging""
+                echo "Deploying to staging"
             #   run: |
             #      echo "Env variable: ${{env.my-env-value}}"
 
