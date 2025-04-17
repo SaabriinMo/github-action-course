@@ -57,6 +57,8 @@ jobs:
                     - shape: circle
                       opacity: 100
                     - opacity: 50
+                exclude:
+                    - opacity: 75
                       
 
 
