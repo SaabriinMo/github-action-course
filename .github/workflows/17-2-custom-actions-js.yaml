@@ -10,7 +10,7 @@ on:
             target-branch:
                 type: string
                 default: update-dependencies
-            working-dir:
+            working-directory:
                 type: string
                 default: 17-custom-actions/react-app
                 required: true
