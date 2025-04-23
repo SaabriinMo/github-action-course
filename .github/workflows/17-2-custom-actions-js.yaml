@@ -12,6 +12,7 @@ on:
                 default: update-dependencies
             working-dir:
                 type: string
+                default: 17-custom-actions/react-app
                 required: true
             debug:
                 type: string
