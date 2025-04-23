@@ -22,12 +22,13 @@ runs:
          node-version: ${{inputs.node-version}}
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           key: node-module-${{ hashFiles(format('{0}/{1}', inputs.working-dir, 'package-lock.json')) }}
-          path: 13-caching/react-app/node_modules
+          path: ${{inputs.working-dir}}/node_modules
 
       - name: Install dependencies
+        if: ${{steps.cache.outputs.cache-hit != 'true'}}
         shell: bash
         run: npm ci
         working-directory: ${{inputs.working-dir}}
