@@ -55,10 +55,23 @@ async function run() {
     }
   );
 
+  const gitDiff = await exec.getExecOutput(
+    'git diff --cached',
+    [],
+    {
+      cwd: workingDir,
+    }
+  )
+
   if (gitStatus.stdout.length > 0) {
     core.info('[js-dependency-update] : There are updates available!');
   } else {
     core.info('[js-dependency-update] : No updates at this point in time.');
+  }
+  if (gitDiff.stdout) {
+    core.info('[js-dependency-update] : Its different');
+  } else{
+    core.info('[js-dependency-update] : No updates.');
   }
   /*
   [DONE] 1. Parse inputs:
