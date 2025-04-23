@@ -31,6 +31,6 @@ jobs:
                 base-branch: ${{inputs.base-branch}}
                 target-branch: ${{inputs.target-branch}}
                 gh-token: ${{secrets.GITHUB_TOKEN}}
-                working-dir: 17-custom-actions/react-app
+                working-directory: ${{inputs.working-directory}}
                 debug: ${{inputs.debug}}
 
