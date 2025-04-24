@@ -15,8 +15,8 @@ on:
                 default: 17-custom-actions/react-app
                 required: true
             debug:
-                type: string
-                default: 'false'
+                type: boolean
+                default: false
             
 permissions:
     contents:
@@ -33,7 +33,7 @@ jobs:
               uses: ./.github/actions/js-dependency-update
               with:
                 base-branch: ${{inputs.base-branch}}
-                target-branch: ${{inputs.target-branch}}
+                head-branch: ${{inputs.target-branch}}
                 gh-token: ${{secrets.GITHUB_TOKEN}}
                 working-directory: ${{inputs.working-directory}}
                 debug: ${{inputs.debug}}
