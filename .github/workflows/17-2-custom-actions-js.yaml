@@ -18,7 +18,11 @@ on:
                 type: string
                 default: 'false'
             
-
+permissions:
+    contents:
+        write
+    pull-requests:
+        write
 
 jobs:
     dependency-update:
