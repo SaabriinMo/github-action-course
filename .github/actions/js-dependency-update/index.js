@@ -59,13 +59,13 @@ async function run() {
     }
   );
 
-  const gitDiff = await exec.getExecOutput(
-    'git diff HEAD^ HEAD',
-    [],
-    {
-      ...commonExecOpts
-    }
-  )
+  // const gitDiff = await exec.getExecOutput(
+  //   'git diff HEAD^ HEAD',
+  //   [],
+  //   {
+  //     ...commonExecOpts
+  //   }
+  // )
 
   if (gitStatus.stdout.length > 0) {
     core.info('[js-dependency-update] : There are updates available!');
@@ -106,11 +106,11 @@ async function run() {
   } else {
     core.info('[js-dependency-update] : No updates at this point in time.');
   }
-  if (gitDiff.stdout) {
-    core.info(`${gitDiff.stdout}`);
-  } else{
-    core.info('[js-dependency-update] : No updates.');
-  }
+  // if (gitDiff.stdout) {
+  //   core.info(`${gitDiff.stdout}`);
+  // } else{
+  //   core.info('[js-dependency-update] : No updates.');
+  // }
   /*
   [DONE] 1. Parse inputs:
     1.1 base-branch from which to check for updates
