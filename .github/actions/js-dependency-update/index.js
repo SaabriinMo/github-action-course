@@ -68,9 +68,9 @@ async function run() {
     return;
   }
 
-  logger.debug(`[js-dependency-update] : base branch is ${baseBranch}`);
-  logger.debug(`[js-dependency-update] : target branch is ${headBranch}`);
-  logger.debug(`[js-dependency-update] : working directory is ${workingDir}`);
+  logger.debug(` base branch is ${baseBranch}`);
+  logger.debug(`target branch is ${headBranch}`);
+  logger.debug(` working directory is ${workingDir}`);
 
   logger.debug('Checking for package updates');
   await exec.exec('npm update', [], {
