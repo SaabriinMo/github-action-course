@@ -4,7 +4,7 @@ import os
 
 def ping_url(url, delay, max_trials):
 
-    trial =0 
+    trial = 0 
     while trial < max_trials:
         try:
             response = requests.get(url)
@@ -21,9 +21,9 @@ def ping_url(url, delay, max_trials):
     return False
 
 def run():
-    website_url = os.getenv("INPUT_URL")
-    delay = int(os.getenv("INPUT_DELAY"))
-    max_trials = int(os.getenv("INPUT_MAX_TRIALS"))
+    website_url = os.getenv("url")
+    delay = int(os.getenv("delay"))
+    max_trials = int(os.getenv("max-trials"))
 
 
     website_reachable = ping_url(website_url, delay, max_trials)
