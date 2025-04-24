@@ -9,7 +9,7 @@ on:
                     - 'wwww.google.com'
                     - 'www.invalid-sufuejsvfue.com'
                 required: true
-            max_trials:
+            max-trials:
                 description: Maximum trials until action fails
                 default: '10'
                 required: false
@@ -29,6 +29,6 @@ jobs:
               uses: ./.github/actions/docker-ping-url
               with:
                 url: ${{inputs.url}}
-                max_trial: ${{inputs.max_trials}}
+                max_trial: ${{inputs.max-trials}}
                 delay: ${{inputs.delays}}
 
