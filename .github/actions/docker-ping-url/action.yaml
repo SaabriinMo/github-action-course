@@ -4,11 +4,11 @@ description: "Ping URL until maximum trials have exceeded. If result is not 200 
 inputs:
   url: # INPUT_URL
     description: URL to ping
-  max-trials: # INPUT_DELAY
+  max-trial: # INPUT_DELAY
     description: Maximum number of trials until action fails
     default: '10'
     required: true
-  delays: # INPUT_MAX_TRIALS
+  delay: # INPUT_MAX_TRIALS
     description: Delay in seconds between trials
     default: '10'
     required: false

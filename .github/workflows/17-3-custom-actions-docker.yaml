@@ -6,8 +6,9 @@ on:
             url:
                 type: choice
                 options: 
-                    - 'wwww.google.com'
+                    - 'https://www.google.com'
                     - 'www.invalid-sufuejsvfue.com'
+                    - 'invalid-aidfghaidgfiazgd'
                 required: true
             max-trials:
                 description: Maximum trials until action fails
