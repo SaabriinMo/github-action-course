@@ -29,6 +29,6 @@ jobs:
               uses: ./.github/actions/docker-ping-url
               with:
                 url: ${{inputs.url}}
-                max_trial: ${{inputs.max-trials}}
+                max-trial: ${{inputs.max-trials}}
                 delay: ${{inputs.delays}}
 
