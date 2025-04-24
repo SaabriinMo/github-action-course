@@ -22,7 +22,7 @@ def ping_url(url, delay, max_trials):
 
 def run():
     website_url = os.getenv("url")
-    delay = int(os.getenv("delay"))
+    delay = int(os.getenv("delays"))
     max_trials = int(os.getenv("max-trials"))
 
 
