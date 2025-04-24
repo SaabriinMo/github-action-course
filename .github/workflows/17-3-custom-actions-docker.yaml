@@ -9,12 +9,12 @@ on:
                     - 'wwww.google.com'
                     - 'www.invalid-sufuejsvfue.com'
                 required: true
-            max_trial:
+            max_trials:
                 description: Maximum trials until action fails
                 default: '10'
                 required: false
 
-            delay:
+            delays:
                 description: Delay in seconds between trials
                 default: '5'
                 required: false
